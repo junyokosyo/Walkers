@@ -1,27 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
+
 using UnityEngine;
-using UnityEngine.Scripting.APIUpdating;
+
 
 public class Playermove : MonoBehaviour
 {
+    [SerializeField]
+    private float _moveSpead;
+
+
     Rigidbody rb;
 
-    [SerializeField] float _moveSpead;
 
-    float _inputX;
+
+
     // Start is called before the first frame update
     void Start()
     {
+
         rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         PlayerMove();
+
     }
+
+    // Update is called once per frame
+
 
     private void PlayerMove()
     {
@@ -31,8 +37,8 @@ public class Playermove : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.A))
         {
-            rb.velocity = Vector3.right *- _moveSpead;
+            rb.velocity = Vector3.right * -_moveSpead;
         }
-        
+
     }
 }

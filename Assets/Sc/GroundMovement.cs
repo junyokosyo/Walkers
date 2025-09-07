@@ -7,7 +7,7 @@ public class GroundMovement : MonoBehaviour
 
     void Update()
     {
-        // ƒ[ƒ‹ƒhÀ•W‚ÅˆÚ“®
+        
         transform.Translate(moveDirection * _speed * Time.deltaTime, Space.World);
     }
 }

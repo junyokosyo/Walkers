@@ -21,8 +21,8 @@ public class GroundGenerator : MonoBehaviour
     void GroundGerate()
     {
 
-        Instantiate(_groundprefab,new Vector3(0.9134874f, -0.01606563f, 44.0954f),Quaternion.identity);
-        Debug.Log("seisei");
+        Instantiate(_groundprefab,new Vector3(0.9134874f, -0.01606563f, 48.0954f),Quaternion.identity);
+       
 
     }
 }
