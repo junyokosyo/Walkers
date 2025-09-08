@@ -5,7 +5,8 @@ using UnityEngine.Events;
 
 public class GroundChecker : MonoBehaviour
 {
-    [SerializeField] UnityEvent _event;
+    [SerializeField] 
+        private UnityEvent _event;
     private void Start()
     {
         

@@ -7,7 +7,7 @@ public class GroundGenerator : MonoBehaviour
 {
 
     [SerializeField]
-    private GameObject _groundprefab;
+        private GameObject _groundprefab;
 
     int _generatAllWeight;
 

@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] int _hp;
-    [SerializeField] int _atk;
+    [SerializeField] 
+        private int _hp;
+
+    [SerializeField] 
+        private int _atk;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,11 +21,13 @@ public class Enemy : MonoBehaviour
         
     }
 
-    public void TekeDamage(int damage)
+    public void TekaDamage(int damage)
     {
+        Debug.Log(damage);
         _hp -= damage;
         if (_hp <= 0)
         {
+            Debug.Log(_hp);
             //‚±‚±‚ÉŽ€‚Êˆ—
         }
     }

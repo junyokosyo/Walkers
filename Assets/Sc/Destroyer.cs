@@ -5,18 +5,15 @@ using UnityEngine.Events;
 
 public class Destroyer : MonoBehaviour
 {
- 
-    [SerializeField]
-    private UnityEvent _generato = null;
     private void Start()
     {
-        
+
     }
 
     void OnTriggerEnter(Collider other)
     {
-        Destroy(other.gameObject);
-        _generato.Invoke();
-       
+        other.transform.position=new Vector3(0.9134874f, -0.01606563f, 48.0954f);
+
+
     }
 }

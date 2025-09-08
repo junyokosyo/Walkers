@@ -5,27 +5,25 @@ using UnityEngine.EventSystems;
 
 public class FlyingUmbrella : MonoBehaviour
 {
-    [SerializeField] int _atk;
-  
-    [SerializeField] float _speed;
+    [SerializeField]
+        private int _atk;
 
-    private Vector3 moveDirection= new Vector3(0,0,1);
-    private Enemy enemy;
+    [SerializeField] 
+        private float _speed;
 
-   
-    void Start()
-    {
-      enemy = GetComponent<Enemy>();
-    }
+    private Vector3 moveDirection = new Vector3(0, 0, 1);
 
-    
     void Update()
     {
-        transform.Translate(moveDirection * _speed * Time.deltaTime, Space.World);//à⁄ìÆÇÇ∑ÇÈèàóù
+        transform.Translate(moveDirection * _speed * Time.deltaTime, Space.World);
     }
-
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (gameObject.CompareTag("enemy")) enemy.TekeDamage(_atk); 
+        if (other.CompareTag("enemy"))
+        {
+            Enemy enemy = other.GetComponent<Enemy>();
+            if (enemy != null) enemy.TekaDamage(_atk);
+        }
+        if (other.CompareTag("Destroy")) Destroy(gameObject);
     }
 }
