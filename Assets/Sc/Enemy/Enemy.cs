@@ -9,11 +9,11 @@ public class Enemy : MonoBehaviour
     [SerializeField]
         private float _atkTIme;
     float _count;
-    EnemyBullet _bullet;
+    EnemyATK _bullet;
     // Start is called before the first frame update
     void Start()
     {
-        _bullet = GetComponent<EnemyBullet>();
+        _bullet = GetComponent<EnemyATK>();
     }
 
     // Update is called once per frame

@@ -29,6 +29,5 @@ public class UmbrellasSpawn : MonoBehaviour
             Instantiate(_unbrellas, _spanpoint.transform.position, Quaternion.Euler(new Vector3(89, 0, 0)));
             _atkTime = 0;
         }
-
     }
 }

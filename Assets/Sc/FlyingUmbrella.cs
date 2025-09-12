@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
+
 
 public class FlyingUmbrella : MonoBehaviour
 {
@@ -23,6 +21,7 @@ public class FlyingUmbrella : MonoBehaviour
         {
             Enemy enemy = other.GetComponent<Enemy>();
             if (enemy != null) enemy.TekaDamage(_atk);
+            Destroy(gameObject);
         }
         if (other.CompareTag("Destroy")) Destroy(gameObject);
     }
