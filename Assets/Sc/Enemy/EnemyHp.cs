@@ -8,12 +8,20 @@ public class EnemyHp : MonoBehaviour
         private int _hp;
     [SerializeField]
         private float _atkTIme;
+    [SerializeField]
+        private GameObject _effect;
+
     float _count;
     EnemyATK _bullet;
+  Rigidbody BulletBody;
+    CapsuleCollider CapsuleCollider;
+
     // Start is called before the first frame update
     void Start()
     {
         _bullet = GetComponent<EnemyATK>();
+        BulletBody = GetComponent<Rigidbody>();
+        CapsuleCollider = GetComponent<CapsuleCollider>();
     }
 
     // Update is called once per frame
@@ -32,8 +40,9 @@ public class EnemyHp : MonoBehaviour
         _hp -= damage;
         if (_hp <= 0)
         {
-            //Debug.Log(_hp);
-            //‚±‚±‚ÉŽ€‚Êˆ—
+            Instantiate(_effect,this.gameObject.transform.position,Quaternion.identity);
+            BulletBody.useGravity = true;
+            CapsuleCollider.enabled = false;
         }
     }
 }

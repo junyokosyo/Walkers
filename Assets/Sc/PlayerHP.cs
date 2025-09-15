@@ -14,7 +14,6 @@ public class PlayerHP : MonoBehaviour
     public void TekaDamage(int damage)
     {
         _health -= damage;
-        Debug.Log(_health);
         Instantiate(_efect,_point.transform.position,Quaternion.identity);
         if (_health <= 0)
         {
