@@ -19,7 +19,7 @@ public class FlyingUmbrella : MonoBehaviour
     {
         if (other.CompareTag("enemy"))
         {
-            Enemy enemy = other.GetComponent<Enemy>();
+            EnemyHp enemy = other.GetComponent<EnemyHp>();
             if (enemy != null) enemy.TekaDamage(_atk);
             Destroy(gameObject);
         }

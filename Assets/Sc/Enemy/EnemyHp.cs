@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class EnemyHp : MonoBehaviour
 {
     [SerializeField] 
         private int _hp;
@@ -29,11 +29,10 @@ public class Enemy : MonoBehaviour
 
     public void TekaDamage(int damage)
     {
-        Debug.Log(damage);
         _hp -= damage;
         if (_hp <= 0)
         {
-            Debug.Log(_hp);
+            //Debug.Log(_hp);
             //‚±‚±‚ÉŽ€‚Êˆ—
         }
     }
