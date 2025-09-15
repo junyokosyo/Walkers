@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1187784143066264000}
   m_Layer: 0
   m_Name: Ground3
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,7 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82f277b4343526246a3ef2c6ee86b895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 5
+  _speed: 10
 --- !u!65 &1187784143066264000
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -146,6 +146,10 @@ PrefabInstance:
     - target: {fileID: 4967428131754438604, guid: a52b3b525e92b1841bcf7ea23b84aad7, type: 3}
       propertyPath: m_Name
       value: Ground (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4967428131754438604, guid: a52b3b525e92b1841bcf7ea23b84aad7, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 5573742930902790697, guid: a52b3b525e92b1841bcf7ea23b84aad7, type: 3}
       propertyPath: m_Enabled
@@ -228,6 +232,10 @@ PrefabInstance:
       value: 'fence '
       objectReference: {fileID: 0}
     - target: {fileID: 7460602978283781795, guid: bf3eb9f382de32b46bf0e7d751ad177f, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460602978283781795, guid: bf3eb9f382de32b46bf0e7d751ad177f, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -302,6 +310,10 @@ PrefabInstance:
       value: fence  (1)
       objectReference: {fileID: 0}
     - target: {fileID: 7460602978283781795, guid: bf3eb9f382de32b46bf0e7d751ad177f, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460602978283781795, guid: bf3eb9f382de32b46bf0e7d751ad177f, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -365,6 +377,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4967428131754438604, guid: a52b3b525e92b1841bcf7ea23b84aad7, type: 3}
       propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 4967428131754438604, guid: a52b3b525e92b1841bcf7ea23b84aad7, type: 3}
+      propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 5573742930902790697, guid: a52b3b525e92b1841bcf7ea23b84aad7, type: 3}
@@ -468,6 +484,10 @@ PrefabInstance:
     - target: {fileID: 4967428131754438604, guid: a52b3b525e92b1841bcf7ea23b84aad7, type: 3}
       propertyPath: m_Name
       value: Ground (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4967428131754438604, guid: a52b3b525e92b1841bcf7ea23b84aad7, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 5573742930902790697, guid: a52b3b525e92b1841bcf7ea23b84aad7, type: 3}
       propertyPath: m_Enabled
