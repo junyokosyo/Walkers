@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 477771912601276079}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.021, y: 0.528, z: 0.226}
+  m_LocalPosition: {x: 0.006, y: 0.528, z: 0.226}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -771,7 +771,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _muzzle: {fileID: 8683015182284967241}
-  _bullet: {fileID: 1851053337966689832, guid: 56ef23d3d4b958d4f87cf8fa6ad8db39, type: 3}
+  _bullet: {fileID: 7878804983521412591, guid: bf2c333be1339e540820fc5b4bc25d6f, type: 3}
 --- !u!114 &9144772758475560963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -786,7 +786,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hp: 3
   _atkTIme: 2
-  _effect: {fileID: 0}
+  _dieEffect: {fileID: 904662820145583817, guid: 019faff12646bd8438ea56e8e7861fd8, type: 3}
+  _damageEffectTarget: {fileID: 1429954232896169633, guid: 83036083a4ebcd34f98131bd3cf6f4d2, type: 3}
 --- !u!1 &2602231374847269571
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,10 +15,6 @@ public class UmbrellasSpawn : MonoBehaviour
         private float _atkCount;
 
     float _atkTime;
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()

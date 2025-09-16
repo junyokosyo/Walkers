@@ -9,7 +9,9 @@ public class EnemyHp : MonoBehaviour
     [SerializeField]
         private float _atkTIme;
     [SerializeField]
-        private GameObject _effect;
+        private GameObject _dieEffect;
+    [SerializeField]
+        private GameObject _damageEffectTarget;
 
     float _count;
     EnemyATK _bullet;
@@ -37,12 +39,12 @@ public class EnemyHp : MonoBehaviour
 
     public void TekaDamage(int damage)
     {
+        Instantiate(_damageEffectTarget,this.gameObject.transform.position, Quaternion.identity);
         _hp -= damage;
         if (_hp <= 0)
         {
-            Instantiate(_effect,this.gameObject.transform.position,Quaternion.identity);
-            BulletBody.useGravity = true;
-            CapsuleCollider.enabled = false;
+            Instantiate(_dieEffect,this.gameObject.transform.position,Quaternion.identity);
+            this.gameObject.SetActive(false);
         }
     }
 }

@@ -12,7 +12,7 @@ public class EnemyATK : MonoBehaviour
 
     public void BulletInstantiate()
     {
-      
-        Instantiate(_bullet,_muzzle.gameObject.transform.position,Quaternion.identity);
+
+        Instantiate(_bullet, _muzzle.transform.position, Quaternion.Euler(new Vector3(-89, 0, 0)));
     }
 }

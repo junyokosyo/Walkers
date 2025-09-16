@@ -183,6 +183,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 5
+  _efect: {fileID: 4021103657954561961, guid: 5c755f9bc5253ea418e919994537dcc7, type: 3}
+  _point: {fileID: 799628994019248541}
 --- !u!1 &1418013367464206140
 GameObject:
   m_ObjectHideFlags: 0
