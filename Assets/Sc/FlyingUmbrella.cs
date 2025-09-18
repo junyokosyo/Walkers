@@ -23,6 +23,12 @@ public class FlyingUmbrella : MonoBehaviour
             if (enemy != null) enemy.TekaDamage(_atk);
             Destroy(gameObject);
         }
+        else if (other.CompareTag("Boss"))
+        {
+         BossHP boss = other.GetComponent<BossHP>();
+            if (boss != null) boss.TekaDamage(_atk);
+            Destroy (gameObject);
+        }
         if (other.CompareTag("Destroy")) Destroy(gameObject);
     }
 }

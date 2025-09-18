@@ -1,36 +1,29 @@
-
 using UnityEngine;
-
 
 public class Playermove : MonoBehaviour
 {
     [SerializeField]
-    private float _moveSpead;
+    private float _moveSpead = 5f;
 
-    Rigidbody rb;
-   
+    private Rigidbody rb;
+    private float moveInput;
+
     void Start()
     {
-
         rb = GetComponent<Rigidbody>();
     }
 
-    private void Update()
+    void Update()
     {
-        PlayerMove();
-
+        // ì¸óÕÇÕ Update Ç≈éÊÇÈ
+        moveInput = 0;
+        if (Input.GetKey(KeyCode.D)) moveInput = 1;
+        if (Input.GetKey(KeyCode.A)) moveInput = -1;
     }
 
-    private void PlayerMove()
+    void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.D))
-        {
-            rb.velocity = Vector3.right * _moveSpead;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            rb.velocity = Vector3.right * -_moveSpead;
-        }
-
+        // Rigidbody ëÄçÏÇÕ FixedUpdate Ç≈çsÇ§
+        rb.velocity = new Vector3(moveInput * _moveSpead, rb.velocity.y, 0f);
     }
 }

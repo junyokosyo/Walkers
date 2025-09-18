@@ -1,8 +1,6 @@
 
 using UnityEditor;
 using UnityEngine;
-using static UnityEditor.Progress;
-
 public class GroundGenerator : MonoBehaviour
 {
 

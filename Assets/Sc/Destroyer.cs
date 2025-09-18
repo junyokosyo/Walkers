@@ -12,9 +12,6 @@ public class Destroyer : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Ground"))
-        {
-            other.transform.position = new Vector3(0.9134874f, -0.01606563f, 48.0954f);
-        }
+        if (other.CompareTag("Ground"))other.transform.position = new Vector3(0.9134874f, -0.01606563f, 48.0954f);
     }
 }

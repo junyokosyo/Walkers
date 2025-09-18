@@ -33,31 +33,35 @@ public class EnemyHp : MonoBehaviour
         _random = new System.Random();
         _atkTImeram = _atkTIme;
     }
-
-
-    // Update is called once per frame
     void Update()
     {
         _count += Time.deltaTime;
-        
+
         if (_count > _atkTImeram)
         {
             _count = 0;
             _bullet.BulletInstantiate();
-            _atkTImeram = _atkTIme + _random.Next(2,6);
+            _atkTImeram = _atkTIme + _random.Next(2, 6);
         }
     }
 
     public void TekaDamage(int damage)
     {
+        SEManager.Instance.PlayAttackSE();
         Instantiate(_damageEffectTarget, this.gameObject.transform.position, Quaternion.identity);
         _hp -= damage;
         if (_hp <= 0)
         {
+           
             Instantiate(_dieEffect, this.gameObject.transform.position, Quaternion.identity);
             this.gameObject.SetActive(false);
 
             _levelSystem.AddExp(1);
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Destroy"))Destroy(this.gameObject);
     }
 }

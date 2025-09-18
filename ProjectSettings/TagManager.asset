@@ -8,6 +8,7 @@ TagManager:
   - enemy
   - FxTemporaire
   - Ground
+  - Boss
   layers:
   - Default
   - TransparentFX
