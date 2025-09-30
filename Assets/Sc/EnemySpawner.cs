@@ -22,6 +22,8 @@ public class EnemySpawner : MonoBehaviour
     private float _bossTime;
     [SerializeField]
     private GameObject _audio;
+    [SerializeField]
+    private GameObject _bossEfect;
 
     float _spawnCount = 0f;
     int _allWeightEnemy1;
