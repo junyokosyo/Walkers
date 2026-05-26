@@ -8,7 +8,7 @@ public class EnemyBullet : MonoBehaviour
     [SerializeField] 
         private float _speed;
     [SerializeField]
-    public int _enemyAtk;
+    private int _enemyAtk;
 
     private Vector3 moveDirection = new Vector3(0, 0, -1);
     // Start is called before the first frame update
